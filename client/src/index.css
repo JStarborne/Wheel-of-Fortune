@@ -1,0 +1,264 @@
+@font-face {
+  font-family: "Monofonto";
+  src: url(./fonts/monofonto.ttf);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-image: linear-gradient(#4e3879, #e4719a);
+  color: #fff;
+}
+
+hr {
+  background-color: #fff;
+  opacity: 0.5;
+  padding-bottom: 0.1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.plane-bg {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(./images/Thunderbirds.jpg);
+  background-position: bottom center;
+  background-size: cover;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.dead-center {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.position-board {
+  display: block;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 0 0.2rem 0.5rem #000;
+  letter-spacing: 0.2rem;
+}
+
+.board-row {
+  background-color: #549e9f;
+  box-shadow: 0 0 2rem rgba(177, 240, 255, 0.8);
+}
+
+.box-noletter,
+.box-letter,
+.box-active {
+  display: inline-block;
+  position: relative;
+  width: 4.8rem;
+  height: 6rem;
+  background-color: #fff;
+  text-align: center;
+  line-height: 4.8rem;
+  color: #000;
+  font-family: "Monofonto";
+  font-weight: bold;
+  font-size: 5rem;
+  margin: 0.15rem;
+  border: 0.6rem solid #000;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.box-active {
+  background-color: #0528f6;
+}
+
+.box-noletter {
+  background-color: #1da388;
+  background-image: url(./images/logo-trans.png);
+  background-position: center;
+  background-size: 2.7rem;
+  background-repeat: no-repeat;
+}
+
+.box-letter.show {
+  text-indent: 0;
+}
+
+.lower-third-box {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 14rem;
+  background: rgba(0, 0, 0, 0.8);
+  border-top: solid 0.2rem #fff;
+}
+
+.category-bg {
+  display: block;
+  position: relative;
+  width: 100%;
+  top: -0.2rem;
+  height: 5rem;
+  background-image: linear-gradient(#000309, #02103f, #000309);
+  border-top: 0.2rem solid rgba(255, 255, 255, 0.9);
+  border-bottom: 0.2rem solid rgba(255, 255, 255, 0.9);
+}
+
+.category-text {
+  opacity: 1;
+  font-size: 2rem;
+  line-height: 4.6rem;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.15rem;
+}
+
+.mini-logo {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  height: 4.6rem;
+  width: 10rem;
+  background-image: url(./images/800th-mini-logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.active-money {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  height: 4.6rem;
+  font-size: 2rem;
+  line-height: 4.6rem;
+}
+
+.position-players {
+  position: relative;
+  width: 100vw;
+  top: 6rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.player-box {
+  display: flex;
+  justify-content: center;
+  width: 16rem;
+  height: 5rem;
+  transition: ease-in-out 0.3s;
+}
+
+.player-box.active {
+  transform: translateY(-1rem);
+}
+
+.player-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+}
+
+.player-box.active .player-name,
+.player-box.active .player-points {
+  text-shadow: 0 0 1.5rem rgb(150, 150, 255, 0.8);
+}
+
+.player-points {
+  font-size: 2.2rem;
+  line-height: 3rem;
+  font-weight: bold;
+  text-shadow: 0 0.2rem 0.2rem #000;
+  padding-bottom: 1.2rem;
+}
+
+.box-letter-edit {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border: 0;
+}
+
+.wheel-position {
+  display: block;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40rem;
+  transition: ease-in-out 1s;
+}
+
+.wheel-position.hide {
+  transform: translateY(50rem);
+}
+
+.wheel-chevron {
+  display: block;
+  position: fixed;
+  width: 10rem;
+  height: 10rem;
+  bottom: 35.5rem;
+  left: 50%;
+  background-image: url(./images/chevron-wheel.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 999999;
+  transform: translateX(-50%);
+}
+
+.wheel {
+  display: block;
+  position: relative;
+  width: 100vw;
+  height: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(./images/wheel.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  /* transition: cubic-bezier(0.58, 0.3, 0.000001, 1) 3.5s; */
+}
+
+.wheel.nofreespin {
+  background-image: url(./images/wheel-nofreespin.png);
+}
+
+.freespin {
+  display: block;
+  position: fixed;
+  top: -4rem;
+  width: 4rem;
+  height: 4rem;
+  background-image: url(./images/freespin.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: ease-in-out 0.5s;
+  transform: translateX(5rem);
+}
+
+.freespin.hide {
+  opacity: 0;
+}

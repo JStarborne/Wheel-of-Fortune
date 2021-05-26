@@ -1,0 +1,18 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-image: linear-gradient(#4e3879, #e4719a);
+  background-position: fixed;
+}
+
+box-noletter,
+box-letter,
+box-active {
+  width: 3rem;
+  height: 4rem;
+  padding: 1rem;
+  background-color: #fff;
+}
